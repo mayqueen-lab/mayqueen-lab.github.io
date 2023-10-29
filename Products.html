@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.210">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MayQueen Technologies - Embedded Linux/Android expert</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+      <img src="images/nutsboard.png" class="img-fluid" style="width:100.0%">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html" aria-current="page">
+             <span class="menu-text">Home</span></a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="./solution.html">
+             <span class="menu-text">Solution</span></a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link active" href="./Products.html">
+             <span class="menu-text">Support Hardware</span></a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="./resource.html">
+             <span class="menu-text">Resource</span></a>
+              </li>   
+            </ul>
+           
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <!--<li><a href="#panelcomputing" id="toc-panelcomputing" class="nav-link active" data-scroll-target="#panelcomputing">Panel computing</a>
+  <ul class="collapse">
+  <li><a href="#crumplabr" id="toc-crumplabr" class="nav-link" data-scroll-target="#crumplabr">IASO-W10-IMX8M</a></li>
+  </ul></li>!-->
+  <li><a href="#systemonmodule" id="toc-systemonmodule" class="nav-link" data-scroll-target="#systemonmodule">Systrm-On-Module </a>
+  <ul class="collapse">
+    <li><a href="#lecimx8mp" id="toc-lecimx8mp" class="nav-link" data-scroll-target="#lecimx8mp">LEC-IMX8MP</a></li>
+  </ul></li>
+  <li><a href="#evaluationkits" id="toc-evaluationkits" class="nav-link" data-scroll-target="#evaluationkits">Evaluation Kits </a>
+  <ul class="collapse">
+  <li><a href="#waferimx8mp" id="toc-waferimx8mp" class="nav-link" data-scroll-target="#waferimx8mp">WAFTER-IMX8MP</a></li>
+  <li><a href="#pieckboard" id="toc-pieckboard" class="nav-link" data-scroll-target="#pieckboard">HW6UL-CORE with PIECK Baseboard</a></li>
+  </ul></li>
+  <li><a href="#edgecomputing" id="toc-edgecomputing" class="nav-link" data-scroll-target="#edgecomputing">Edge computing</a>
+  <ul class="collapse">
+  <li><a href="#panzer" id="toc-panzer" class="nav-link" data-scroll-target="#panzer">PANZER</a></li>
+  <li><a href="#pocketpi5" id="toc-pocketpi5" class="nav-link" data-scroll-target="#pocketpi5">POCKET PI 5</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<style type="text/css">
+.quarto-title {
+    display: none;
+  }
+</style>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/apps_banner.jpg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p>All devices as following do support our software solution with multiple Certification such as RoHS/RoHS3, and REACH, so you can choose our products to the market quickly. </p>
+<hr>
+
+  <section id="systemonmodule" class="level1">
+    <h1>System-On-Module</h1>
+    <hr>
+    <div class="columns">
+     <div class="column" style="width:65%;">
+
+      <section id="lecimx8mp" class="level2">
+    
+        <h2 class="anchored" data-anchor-id="lecimx8mp">LEC-IMX8MP</h2>
+        <p><strong>Specification</strong>: </p>
+        <p>
+          <table border="1" cellpadding="3" cellspacing="1" style="border: 3px solid #000000; border-collapse: collapse; width:90%;">
+          <th bgcolor=#8c98db>Core</th><th bgcolor=#8c98db></th>
+          <tr><td><b>CPU</b></td><td align="center">NXP i.MX8M Plus </td></tr>
+          <tr><td><b>Architecure</b></td><td align="center">ARM Cortex-A53 1.8GHz Quad Cores</td></tr>
+          <tr><td><b>Memory</b></td><td align="center">4GB LPDDR4</td></tr>
+          <tr><td><b>Storage</b></td><td align="center">16GB eMMC</td></tr>
+          <tr><td><b>Neural Nework</b></td><td align="center">2.3 TOPS NPU</td></tr>
+          <tr><td><b>PMIC</b></td><td align="center">NXP PCA9450</td></tr>
+          <th bgcolor=#8c98db>Networking</th><th bgcolor=#8c98db></th>
+          <tr><td><b>Ethernet</b></td><td align="center">10/100/1000 RGMII x2</td></tr>
+          
+          <tr><td><b>PCIe</b></td><td align="center"> 1-lane Gen2.1 x2</td></tr>
+          <th bgcolor=#8c98db>Multimedia</th><th bgcolor=#8c98db></th>
+          <tr><td><b>MIPI-CSI</b></td><td align="center">MIPI-CSI FHD camera</td></tr>
+          <tr><td><b>MIPI-DSI</b></td><td align="center">HDMI - FHD resolution</td></tr>
+          <tr><td><b>HDMI</b></td><td align="center">MIPI-DSI interface</td></tr>
+          <tr><td><b>LVDS</b></td><td align="center">I2C with multi-touch</td></tr>
+          <th bgcolor=#8c98db>Peripheral</th><th bgcolor=#8c98db></th>
+          <tr><td><b>USB</b></td><td align="center">USB 3.0 x2, USB 2.0 x3, USB 2.0 OTG x1 </td></tr>
+          <tr><td><b>GPIO</b></td><td align="center">x14</td></tr>
+          <tr><td><b>UART</b></td><td align="center">4-wire x2</td></tr>
+          <tr><td><b>I2C</b></td><td align="center">x4</td></tr>
+          <tr><td><b>SPI</b></td><td align="center">x2</td></tr>
+          <tr><td><b>CAN</b></td><td align="center">x2</td></tr>
+          <tr><td><b>I2S</b></td><td align="center">x2</td></tr>
+          <th bgcolor=#8c98db>Form factor</th><th bgcolor=#8c98db></th>
+          <tr><td><b>SMARC short</b></td><td align="center">82mm x 50mm</td></tr>
+          <th bgcolor=#8c98db>Software OS</th><th bgcolor=#8c98db></th>
+          <tr><td><b>Yocto</b></td><td align="center">4.0 and above</td></tr>
+          <tr><td><b>Ubuntu</b></td><td align="center">20.04</td></tr>
+          <tr><td><b>Android</b></td><td align="center">11</td></tr>
+          <tr><td><b>Boot2QT</b></td><td align="center">5</td></tr>
+          <tr><td><b>Vxworks</b></td><td align="center"></td></tr>
+          </table>
+          </p>
+        </section>
+        </div><div class="column" style="width:35%;">
+          <div class="cell">
+          <div class="cell-output-display">
+            <p><img src="images/imx8mp_module.png" class="img-fluid"></p>
+          </div>
+          </div>
+          </div>
+          <hr>
+  
+    <section id="evaluationkits" class="level1">
+       <h1>Evaluation Kits</h1>
+        <hr>
+        <div class="columns">
+
+    <div class="column" style="width:65%;">
+
+    <section id="waferimx8mp" class="level2">
+    
+    <h2 class="anchored" data-anchor-id="waferimx8mp">WAFER-IMX8MP</h2>
+    <p><strong>Specification</strong>: </p>
+    <p>
+      <table border="1" cellpadding="3" cellspacing="1" style="border: 3px solid #000000; border-collapse: collapse; width:90%;">
+      <th bgcolor=#8c98db>Core</th><th bgcolor=#8c98db></th>
+      <tr><td><b>CPU</b></td><td align="center">NXP i.MX8M Plus </td></tr>
+      <tr><td><b>Architecure</b></td><td align="center">ARM Cortex-A53 1.8GHz Quad Cores</td></tr>
+      <tr><td><b>Memory</b></td><td align="center">4GB LPDDR4</td></tr>
+      <tr><td><b>Storage</b></td><td align="center">16GB eMMC</td></tr>
+      <tr><td><b>Neural Nework</b></td><td align="center">2.3 TOPS NPU</td></tr>
+      <tr><td><b>PMIC</b></td><td align="center">NXP PCA9450</td></tr>
+      <th bgcolor=#8c98db>Networking</th><th bgcolor=#8c98db></th>
+      <tr><td><b>Wired</b></td><td align="center">10/100/1000 RGMII Ethernet x2</td></tr>
+      
+      <tr><td><b>Mobile</b></td><td align="center">M.2. LTE/5GNR module</td></tr>
+      <th bgcolor=#8c98db>Multimedia</th><th bgcolor=#8c98db></th>
+      <tr><td><b>Camera</b></td><td align="center">MIPI-CSI FHD camera</td></tr>
+      <tr><td><b>Display 1</b></td><td align="center">HDMI - FHD resolution</td></tr>
+      <tr><td><b>Display 2</b></td><td align="center">MIPI-DSI interface</td></tr>
+      <tr><td><b>Touchscreen</b></td><td align="center">I2C with multi-touch</td></tr>
+      <th bgcolor=#8c98db>Peripheral</th><th bgcolor=#8c98db></th>
+      <tr><td><b>USB Host</b></td><td align="center">USB 3.0 x2</td></tr>
+      <tr><td><b>DI/DO</b></td><td align="center">x8</td></tr>
+      <tr><td><b>RS232/RS422/RS485</b></td><td align="center">4-wire x2</td></tr>
+      <tr><td><b>Power key</b></td><td align="center">x1</td></tr>
+      <th bgcolor=#8c98db>Software OS</th><th bgcolor=#8c98db></th>
+      <tr><td><b>Yocto</b></td><td align="center">4.0 and above</td></tr>
+      <tr><td><b>Ubuntu</b></td><td align="center">22.04 and above</td></tr>
+      <tr><td><b>LTS Android</b></td><td align="center">12 and above</td></tr>
+      <th bgcolor=#8c98db>Optional</th><th bgcolor=#8c98db></th>
+      <tr><td><b>Wireless</b></td><td align="center">BCM43752 WIFI6 / BT 5.0</td></tr>
+      <tr><td><b></b></td><td align="center">RTL8822CS WIFI5 / BT 4.x</td></tr>
+      <tr><td><b></b></td><td align="center">LTE/5GNR M.2. module</td></tr>
+      <tr><td><b>DSI Panel</b></td><td align="center">10.1" DSI panel with I2C Touchscreen  </td></tr>
+      </table>
+      </p>
+    </section>
+    </div><div class="column" style="width:35%;">
+      <div class="cell">
+      <div class="cell-output-display">
+        <p><img src="images/wafer-imx8mp-1.png" class="img-fluid"></p>
+      <p><img src="images/wafer-imx8mp-2.png" class="img-fluid"></p>
+      </div>
+      </div>
+      </div>
+      <hr>
+    
+      <div class="column" style="width:65%;">
+    
+        <section id="pieckboard" class="level2">
+        
+        <h2 class="anchored" data-anchor-id="pieckboard">HW6UL-CORE woth PIECK Baseboard</h2>
+        <p><strong>Specification</strong>: </p>
+        <p>
+          <table border="1" cellpadding="3" cellspacing="1" style="border: 3px solid #000000; border-collapse: collapse; width:90%;">
+          <th bgcolor=#8c98db>Core</th><th bgcolor=#8c98db></th>
+          <tr><td><b>CPU</b></td><td align="center"> NXP i.MX6 UrltaLite</td></tr>
+          <tr><td><b>Architecure</b></td><td align="center"> ARM Cortex-A7 540GHz Solo Core</td></tr>
+          <tr><td><b>Memory</b></td><td align="center">256MB DDR3</td></tr>
+          <tr><td><b>Storage</b></td><td align="center">256MB NAND Flash</td></tr>
+          <th bgcolor=#8c98db>Networking</th><th bgcolor=#8c98db></th>
+          <tr><td><b>Wired</b></td><td align="center">10/100 RMII Ethernet x1</td></tr>
+          <tr><td><b>Mobile</b></td><td align="center">mPCIE LTE/5GNR module</td></tr>
+          <tr><td><b>SIM Slot</b></td><td align="center">x1</td></tr>
+          <th bgcolor=#8c98db>Multimedia</th><th bgcolor=#8c98db></th>
+          <tr><td><b>Display</b></td><td align="center">D-SUB VGA - 1024x600</td></tr>
+          <tr><td><b>Audio</b></td><td align="center">TRS Audio Jack x1</td></tr>
+          <th bgcolor=#8c98db>Peripheral</th><th bgcolor=#8c98db></th>
+          <tr><td><b>USB Host</b></td><td align="center">USB 2.0 x2</td></tr>
+          <tr><td><b>DI/DO</b></td><td align="center">DI x2, DO x2 (5 Volt)</td></tr>
+          <tr><td><b>RS232</b></td><td align="center">2-wire x4</td></tr>
+          <tr><td><b>RS485</b></td><td align="center">2-wire x3</td></tr>
+          <tr><td><b>CAN BUS</b></td><td align="center">x2</td></tr>
+          <tr><td><b>RTC</b></td><td align="center">x1</td></tr>
+          <th bgcolor=#8c98db>Mechanical</th><th bgcolor=#8c98db></th>
+          <tr><td><b>Dimensions</b></td><td align="center">140(W)x130(H)x30(D)mm</td></tr>
+          <th bgcolor=#8c98db>Certification</th><th bgcolor=#8c98db></th>
+          <tr><td><b>Certification</b></td><td align="center">RoHS</td></tr>
+          <th bgcolor=#8c98db>Additional</th><th bgcolor=#8c98db></th>
+          <tr><td><b>Grade</b></td><td align="center">Industrial grade</td></tr>
+          <th bgcolor=#8c98db>Software OS</th><th bgcolor=#8c98db></th>
+          <tr><td><b>Buildroot</b></td><td align="center"></td></tr>    
+          </table>
+          </p>
+        </section>
+        </div><div class="column" style="width:35%;">
+          <div class="cell">
+          <div class="cell-output-display">
+            <p><img src="images/hwcore-6ul.png" class="img-fluid"></p>
+          <p><img src="images/pieckboard.png" class="img-fluid"></p>
+          </div>
+          </div>
+          </div>
+          <hr>
+
+          <section id="edgecomputing" class="level1">
+            <h1>Edge Comuting</h1>
+            <hr>
+            <div class="columns">
+            <div class="column" style="width:65%;">
+            <section id="vertical" class="level2">
+            <h2 class="anchored" data-anchor-id="panzer"><a href="https://github.com/mayqueen-lab/documents/raw/master/datasheets/panzer.pdf">PANZER</a></h2>
+            
+            <p><strong>Specification</strong>: </p>
+            <p>
+              <table border="1" cellpadding="3" cellspacing="1" style="border: 3px solid #000000; border-collapse: collapse; width:90%;">
+                <th bgcolor=#8c98db>Core</th><th bgcolor=#8c98db></th>
+                <tr><td><b>CPU</b></td><td align="center"> NXP i.MX6 UrltaLite</td></tr>
+                <tr><td><b>Architecure</b></td><td align="center"> ARM Cortex-A7 540GHz Solo Core</td></tr>
+                <tr><td><b>Memory</b></td><td align="center">256MB DDR3</td></tr>
+                <tr><td><b>Storage</b></td><td align="center">256MB NAND Flash</td></tr>
+                <th bgcolor=#8c98db>Networking</th><th bgcolor=#8c98db></th>
+                <tr><td><b>Wired</b></td><td align="center">10/100 RMII Ethernet x1</td></tr>
+                <tr><td><b>Mobile</b></td><td align="center">mPCIE LTE/5GNR module</td></tr>
+                <tr><td><b>SIM Slot</b></td><td align="center">x1</td></tr>
+                <th bgcolor=#8c98db>Multimedia</th><th bgcolor=#8c98db></th>
+                <tr><td><b>Display</b></td><td align="center">D-SUB VGA - 1024x600</td></tr>
+                <tr><td><b>Audio</b></td><td align="center">TRS Audio Jack x1</td></tr>
+                <th bgcolor=#8c98db>Peripheral</th><th bgcolor=#8c98db></th>
+                <tr><td><b>USB Host</b></td><td align="center">USB 2.0 x2</td></tr>
+                <tr><td><b>DI/DO</b></td><td align="center">DI x2, DO x2 (5 Volt)</td></tr>
+                <tr><td><b>RS232</b></td><td align="center">2-wire x4</td></tr>
+                <tr><td><b>RS485</b></td><td align="center">2-wire x3</td></tr>
+                <tr><td><b>CAN BUS</b></td><td align="center">x2</td></tr>
+                <tr><td><b>RTC</b></td><td align="center">x1</td></tr>
+                <th bgcolor=#8c98db>Mechanical</th><th bgcolor=#8c98db></th>
+                <tr><td><b>Dimensions</b></td><td align="center">140(W)x130(H)x30(D)mm</td></tr>
+                <th bgcolor=#8c98db>Certification</th><th bgcolor=#8c98db></th>
+                <tr><td><b>Certification</b></td><td align="center">RoHS</td></tr>
+                <th bgcolor=#8c98db>Additional</th><th bgcolor=#8c98db></th>
+                <tr><td><b>Grade</b></td><td align="center">Industrial grade</td></tr>
+                <th bgcolor=#8c98db>Software OS</th><th bgcolor=#8c98db></th>
+                <tr><td><b>Buildroot</b></td><td align="center"></td></tr>    
+                </table>
+            </p>
+            
+            </section>
+            </div><div class="column" style="width:35%;">
+              <div class="cell">
+              <div class="cell-output-display">
+                <p><img src="images/panzer.png" class="img-fluid"></p>
+              <p><img src="images/panzer-back.png" class="img-fluid"></p>
+              </div>
+              </div>
+              </div>
+              </div>
+              <hr>
+
+              <div class="column" style="width:65%;">
+                <section id="vertical" class="level2">
+                <h2 class="anchored" data-anchor-id="pocketpi5"><a>Pocket PI-5</a></h2>
+                
+                <p><strong>Specification</strong>: </p>
+                <p>
+                  <table border="1" cellpadding="3" cellspacing="1" style="border: 3px solid #000000; border-collapse: collapse; width:90%;">
+                    <th bgcolor=#8c98db>Core</th><th bgcolor=#8c98db></th>
+                    <tr><td><b>CPU</b></td><td align="center"> Broadcom BCM2712 </td></tr>
+                    <tr><td><b>Architecure</b></td><td align="center"> ARM Cortex-A76 2.4GHz Quad Core</td></tr>
+                    <tr><td><b>Memory</b></td><td align="center">8GB LPDDR4</td></tr>
+                    <tr><td><b>Storage</b></td><td align="center">uSD card</td></tr>
+                    <th bgcolor=#8c98db>Networking</th><th bgcolor=#8c98db></th>
+                    <tr><td><b>Wired</b></td><td align="center">10/100/1000 RGMII Ethernet x1</td></tr>
+                    <tr><td><b>PCIE</b></td><td align="center">RPI PCIE 2.0 connector x1</td></tr>
+                    <tr><td><b>WiFi</b></td><td align="center">WIFI5 x1</td></tr>
+                    <tr><td><b>Bluetooth</b></td><td align="center">BT 5.0 x1</td></tr>
+                    <th bgcolor=#8c98db>Multimedia</th><th bgcolor=#8c98db></th>
+                    <tr><td><b>Display</b></td><td align="center">Mini HDMI - 4kp60</td></tr>
+                    <th bgcolor=#8c98db>Peripheral</th><th bgcolor=#8c98db></th>
+                    <tr><td><b>USB Host</b></td><td align="center">USB3.0 x2, USB 2.0 x2</td></tr>
+                    <tr><td><b>RTC</b></td><td align="center">x1</td></tr>
+                    <th bgcolor=#8c98db>Mechanical</th><th bgcolor=#8c98db></th>
+                    <tr><td><b>Dimensions</b></td><td align="center">105.9x68.7x27mm</td></tr>
+                    <th bgcolor=#8c98db>Certification</th><th bgcolor=#8c98db></th>
+                    <tr><td><b>Certification</b></td><td align="center">CE, RoHS</td></tr>
+                    <th bgcolor=#8c98db>Software OS</th><th bgcolor=#8c98db></th>
+                    <tr><td><b>Debian</b></td><td align="center">12</td></tr>    
+                    </table>
+                </p>
+                
+                </section>
+                </div><div class="column" style="width:35%;">
+                  <div class="cell">
+                  <div class="cell-output-display">
+                    <p><img src="images/rpi5-front.jpg" class="img-fluid"></p>
+                  <p><img src="images/rpi5-back.jpg" class="img-fluid"></p>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <hr>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

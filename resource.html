@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.210">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MayQueen Technologies - Embedded Linux/Android expert</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HPGGT4QZ8Q', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+      <img src="images/nutsboard.png" class="img-fluid" style="width:100.0%">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html" aria-current="page">
+             <span class="menu-text">Home</span></a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="./solution.html">
+             <span class="menu-text">Solution</span></a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="./Products.html">
+             <span class="menu-text">Support Hardware</span></a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link active" href="./resource.html">
+             <span class="menu-text">Resource</span></a>
+              </li>
+            </ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <!--<li><a href="#panelcomputing" id="toc-panelcomputing" class="nav-link active" data-scroll-target="#panelcomputing">Panel computing</a>
+  <ul class="collapse">
+  <li><a href="#crumplabr" id="toc-crumplabr" class="nav-link" data-scroll-target="#crumplabr">IASO-W10-IMX8M</a></li>
+  </ul></li>!-->
+  <li><a href="#systemonmodule" id="toc-systemonmodule" class="nav-link" data-scroll-target="#systemonmodule">System On Module</a>
+    <ul class="collapse">
+      <li><a href="#lecimx8mp" id="toc-lecimx8mp" class="nav-link" data-scroll-target="#lecimx8mp">LEC-IMX8MP</a></li>
+  </ul></li>
+  <li><a href="#evaluationkits" id="toc-evaluationkits" class="nav-link" data-scroll-target="#evaluationkits">Evaluation Kits </a>
+  <ul class="collapse">
+  <li><a href="#pieckboard" id="toc-pieckboard" class="nav-link" data-scroll-target="#pieckboard">HW6UL-CORE with PIECK Baseboard</a></li>
+  </ul></li>
+  <li><a href="#edgecomputing" id="toc-edgecomputing" class="nav-link" data-scroll-target="#edgecomputing">Edge computing</a>
+  <ul class="collapse">
+  <li><a href="#nsfrmarkdown" id="toc-nsfrmarkdown" class="nav-link" data-scroll-target="#nsfrmarkdown">PANZER</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<style type="text/css">
+.quarto-title {
+    display: none;
+  }
+</style>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/resource_banner.jpg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p>All hardware documents, instructions and software image with source code download resource.</p>
+<hr>
+
+
+  <section id="systemonmodule" class="level1">
+    <h1>System-On-Module</h1>
+    <hr>
+    <div class="columns">
+     <div class="column" style="width:65%;">
+    
+    <section id="lecimx8mp" class="level2">
+    
+    <h2 class="anchored" data-anchor-id="lecimx8mp">LEC-IMX8MP</h2>
+    <p><strong>Specification</strong>: </p>
+    <p>
+      <table border="1" cellpadding="3" cellspacing="1" style="border: 3px solid #000000; border-collapse: collapse; width:90%;">
+        <th bgcolor=#8c98db>Documents</th><th bgcolor=#8c98db></th>
+        <tr><td></td><td align="left"><a href="https://hq0epm0west0us0storage.blob.core.windows.net/%24web/public/SMARC/LEC-iMX8MP/3D_Files/LEC-iMX8MP%2055%20ASSY.7z">3D file</a></td></tr>
+        <tr><td></td><td align="left"><a href="https://hq0epm0west0us0storage.blob.core.windows.net/%24web/public/SMARC/LEC-iMX8MP/documentation/77A07-0A20-A0-SCHPDF_20210310_1500%20.pdf">Schematic</a></td></tr>
+        <th bgcolor=#8c98db>Software OS</th><th bgcolor=#8c98db></th>
+        <tr><td><b>Yocto 3.5</b></td><td align="left"><a href="https://github.com/ADLINK/meta-adlink-nxp">Source Code</a><br><a href="https://hq0epm0west0us0storage.blob.core.windows.net/%24web/public/SMARC/LEC-iMX8MP/Images/Yocto/LEC-IMX8MP-2G-IPi-SMARC-PLUS_Yocto-hardknott_V1_R3_2022_11_17.zip">DEMO image</a></td></tr>
+        <tr><td><b>Android 11</b></td><td align="left"><a href="https://github.com/ADLINK/imx8mp_android">Source Code</a><br><a href="https://hq0epm0west0us0storage.blob.core.windows.net/%24web/public/SMARC/LEC-iMX8MP/Images/Android/LEC-IMX8MP-IPi-SMARC-PLUS_Android_11_V2_R4_2023_04_21.zip">DEMO image</a></td></tr>
+        <tr><td><b>Boot2QT</b></td><td align="left"><a href="https://hq0epm0west0us0storage.blob.core.windows.net/%24web/public/SMARC/LEC-iMX8MP/Images/Demo/LEC-IMX8MP-2G-IPi-SMARC-PLUS_Boot2QT_qt5_20210429.zip">DEMO image</a></td></tr>
+      </table>
+      </p>
+    </section>
+    </div><div class="column" style="width:35%;">
+      <div class="cell">
+      <div class="cell-output-display">
+        <p><img src="images/imx8mp_module.png" class="img-fluid"></p>
+      </div>
+      </div>
+      </div>
+      <hr>
+
+      <section id="evaluationkits" class="level1">
+      <h1>Evaluation Kits</h1>
+      <hr>
+      <div class="columns">
+      <div class="column" style="width:65%;">
+    
+        <section id="pieckboard" class="level2">
+        
+        <h2 class="anchored" data-anchor-id="pieckboard"><a href="pieckboard">HW6UL-CORE woth PIECK Baseboard</a></h2>
+        <p><strong>Specification</strong>: </p>
+        <p>
+          <table border="1" cellpadding="3" cellspacing="1" style="border: 3px solid #000000; border-collapse: collapse; width:90%;">
+            <th bgcolor=#8c98db>Documents</th><th bgcolor=#8c98db></th>
+            <tr><td></td><td align="left"> <a href="https://github.com/mayqueen-lab/documents/raw/master/quickguide/MQ_PANZER_Quick_Guide.pdf">Quick Installer Guide</a>
+              <br><a href="https://www.dropbox.com/home/2018/Panzer/document?preview=MQ_HW6UL-CORE_design_guide.pdf">Hardware design guide</a>
+              <br><a href="https://github.com/mayqueen-lab/documents/blob/master/quickguide/PANZER_NAND_Installer_User_Manual.pdf">NAND Flash installer guide</a>
+            </td></tr>
+            <th bgcolor=#8c98db>Software OS</th><th bgcolor=#8c98db></th>
+            <tr><td><b>Linux 4.9</b></td><td align="left"><a href="https://github.com/mayqueen-lab/uboot-imx.git">u-boot v2015.04</a><br><a href="https://github.com/mayqueen-lab/linux-imx/commits/mq_imx_4.9.11_1.0.0_ga">kernel 4.9.11</a></td></tr>
+            <tr><td><b>Linux 5.10</b></td><td align="left"><a href="https://github.com/nutsboard-lab/u-boot/tree/mq_2020.04+fslc-next">u-boot v2020.04</a><br><a href="https://github.com/nutsboard-lab/kernel/tree/mq-5.10.72-2.2.0_next">kernel 5.10.72</a></td></tr>           
+            <tr><td><b>Buildroot 2017.08</b></td><td align="left"><a href="https://github.com/mayqueen-lab/buildroot/tree/201708-nxp-1.0.0-ga-wip">source code</a><br><a href="https://www.dropbox.com/s/7qayt56jy8ieq93/20171220_panzer_buildroot-v201708_installer.zip?dl=0">Image Installer</a><br><a href="https://www.dropbox.com/s/7qayt56jy8ieq93/20171220_panzer_buildroot-v201708_installer.zip?dl=0">Installer guide</a></td></tr>
+            <tr><td><b>Buildroot 2022.02</b></td><td align="left"><a href="https://github.com/mayqueen-lab/buildroot/tree/202002-mq-1.0.0-ga-lioncatzoo">source code</a></td></tr>
+            </table>
+        </p>
+        </section>
+        </div><div class="column" style="width:35%;">
+          <div class="cell">
+          <div class="cell-output-display">
+            <p><img src="images/hwcore-6ul.png" class="img-fluid"></p>
+          <p><img src="images/pieckboard.png" class="img-fluid"></p>
+          </div>
+          </div>
+          </div>
+          <hr>
+
+          <section id="edgecomputing" class="level1">
+            <h1>Edge Comuting</h1>
+            <hr>
+            <div class="columns">
+            <div class="column" style="width:65%;">
+            <section id="vertical" class="level2">
+            <h2 class="anchored" data-anchor-id="vertical">PANZER</h2>
+            
+            <p><strong>Specification</strong>: </p>
+            <p>
+              <table border="1" cellpadding="3" cellspacing="1" style="border: 3px solid #000000; border-collapse: collapse; width:90%;">
+                <th bgcolor=#8c98db>Documents</th><th bgcolor=#8c98db></th>
+                <tr><td></td><td align="left"> <a href="https://github.com/mayqueen-lab/documents/raw/master/quickguide/MQ_PANZER_Quick_Guide.pdf">Quick Installer Guide</a>
+                  <br><a href="https://github.com/mayqueen-lab/documents/blob/master/quickguide/PANZER_NAND_Installer_User_Manual.pdf">NAND Flash installer guide</a>
+                </td></tr>
+                <th bgcolor=#8c98db>Software OS</th><th bgcolor=#8c98db></th>
+                <tr><td><b>Linux 4.9</b></td><td align="left"><a href="https://github.com/mayqueen-lab/uboot-imx.git">u-boot v2015.04</a><br><a href="https://github.com/mayqueen-lab/linux-imx/commits/mq_imx_4.9.11_1.0.0_ga">kernel 4.9.11</a></td></tr>
+                <tr><td><b>Linux 5.10</b></td><td align="left"><a href="https://github.com/nutsboard-lab/u-boot/tree/mq_2020.04+fslc-next">u-boot v2020.04</a><br><a href="https://github.com/nutsboard-lab/kernel/tree/mq-5.10.72-2.2.0_next">kernel 5.10.72</a></td></tr>
+                <tr><td><b>Buildroot 2017.08</b></td><td align="left"><a href="https://github.com/mayqueen-lab/buildroot/tree/201708-nxp-1.0.0-ga-wip">source code</a><br><a href="https://www.dropbox.com/s/7qayt56jy8ieq93/20171220_panzer_buildroot-v201708_installer.zip?dl=0">Image Installer</a><br><a href="https://www.dropbox.com/s/7qayt56jy8ieq93/20171220_panzer_buildroot-v201708_installer.zip?dl=0">Installer guide</a></td></tr>
+                <tr><td><b>Buildroot 2022.02</b></td><td align="left"><a href="https://github.com/mayqueen-lab/buildroot/tree/202002-mq-1.0.0-ga-lioncatzoo">source code</a></td></tr>
+                </table>
+            </p>
+            
+            </section>
+            </div><div class="column" style="width:35%;">
+              <div class="cell">
+              <div class="cell-output-display">
+                <p><img src="images/panzer.png" class="img-fluid"></p>
+              <p><img src="images/panzer-back.png" class="img-fluid"></p>
+              </div>
+              </div>
+              </div>
+              </div>
+              <hr>
+
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
