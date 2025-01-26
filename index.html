@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MayQueen Tecgnologies</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <style>
+        /* 自定義 CSS 樣式 */
+        body {
+            /* 使用 Ubuntu 經典桌布作為背景 */
+            background-image: url("https://images4.alphacoders.com/841/84136.jpg"); /* 替換成您找到的 Ubuntu 桌布 URL */
+            background-size: cover; /* 讓背景圖片覆蓋整個視窗 */
+            background-repeat: no-repeat; /* 防止背景圖片重複 */
+            /* background-attachment: fixed;  取消背景固定 */
+            font-family: 'Ubuntu', sans-serif; /* 使用 Ubuntu 字體 */
+        }
+
+        .window {
+            margin-bottom: 20px;
+            border-radius: 5px; /* 視窗圓角 */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 視窗陰影 */
+            border: 1px solid #c0c0c0;/* 修改邊框顏色 */
+            width: 90%;
+            max-width: 400px; /* 或許你可以自行調整最大寬度 */
+        }
+
+        .title-bar-text{
+            font-weight: bold;
+        }
+
+        /*修改視窗欄顏色配置*/
+        .title-bar {
+            background: linear-gradient(to right, #d6823f, #a9592e);
+            border-radius: 5px 5px 0 0; /* 標題欄上方圓角 */
+            padding: 5px;
+        }
+
+        .window-body {
+            overflow: auto; /* 使內容可滾動 */
+            max-height: 300px; /* 設定最大高度 */
+                font-size: 13px; /* 稍微增大字體大小 */
+    line-height: 1.5; /* 調整行高 */
+    font-family: 'Silkscreen', monospace; /* 使用 Silkscreen 字體 */
+        }
+
+        /*修改字體顏色*/
+        .window-body, .title-bar-text {
+            color: white;
+        }
+        
+        /* 按鈕樣式 */
+        button {
+            background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 5px 10px;
+            font-family: 'Ubuntu', sans-serif;
+            color: #333; /*修改按鈕文字顏色*/
+        }
+
+        button:hover {
+            background: linear-gradient(to bottom, #e8e8e8, #d8d8d8);
+        }
+
+        button:active {
+            background: #ccc;
+        }
+
+        /* 捲軸樣式 (僅部分瀏覽器支援) */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* 媒體查詢 */
+        @media (max-width: 768px) {
+            .window {
+                width: 100%;
+                max-width: none; /* 取消最大寬度限制 */
+            }
+
+            .title-bar-controls {
+                display: none; /* 隱藏標題欄按鈕 */
+            }
+
+            .window-body {
+                max-height: none;
+            }
+        }
+
+        /* 圖片樣式 */
+        .window-body img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* 讓圖片獨佔一行 */
+            margin-left: auto;
+            margin-right: auto; /* 水平置中 */
+            margin-bottom: 10px; /* 與下方文字的間距 */
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+</head>
+<body>
+    <div class="container">
+        <div class="window" style="width: 400px">
+            <div class="title-bar">
+                <div class="title-bar-text">About Us</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+            <img                 src="https://camo.githubusercontent.com/450c3ba336a249e86330348e748e3d284e97a7bdaf8bd0d198d823837bc0e66c/68747470733a2f2f7777772e6d6179717565656e746563682e636f6d2f696d672f6c6f676f2e706e67" alt="圖片" style="width: 50%; height: auto;">
+               
+               
+ <p>Introducing Mayqueen Technologies, a cutting-edge startup founded in 2015 with a focus on ARM-based edge computing devices. Our core value lies in providing customized featured Linux/Android OS, combining the power of open source technology to help our customers quickly bring their ideas to life and bring them to market.</p>
+<p>At MayQueen, we believe in empowering our customers with the ability to tailor their device to fit their unique needs. Our team of experts works closely with each customer to understand their vision and provide a customized solution that exceeds their expectations.</p>
+<p>Our commitment to open source technology allows us to continuously innovate and provide our customers with the latest in edge computing advancements. We believe that by combining the power of customization and open source, we can create truly unique and impactful devices that make a difference in the world.</p>
+<p>So, if you're looking for a partner who can help bring your edge computing ideas to life, look no further than MayQueen. Contact us today to learn more about how we can help make your vision a reality.</p>
+ <hr style="margin-top: 10px; margin-bottom: 10px;"> </hr>
+ How can we assist you:
+ <div class="window-body">
+                <ul>
+                    <li>
+                        We provide our self-developed standard products combined with powerful, long-term maintained, and open-source operating systems to help you quickly port your applications and bring them to market.
+                    </li>
+                    <li>
+                        If you have your own hardware devices, we can assist with operating system functionality optimization and offer long-term maintenance outsourcing services.
+                    </li>
+                    <li>
+                       If you have ODM project requirements, we collaborate with factories in Taiwan that adhere to ISO9001 and ISO14001 quality standards.
+                    </li>
+                </ul>
+            </div>
+            
+            </div>
+        </div>
+
+        <div class="window" style="width: 400px">
+            <div class="title-bar">
+                <div class="title-bar-text">MQ ARM based Edge-AIOT Computing</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <ul>
+                    <li>
+                        <a href="https://github.com/MayQueenTechCommunity/PANZER-PLUS">PANZER-PLUS</a> ARM64 NXP IMX8MP
+                    </li>
+                    <li>
+                        <a href="https://github.com/MayQueenTechCommunity/PANZER">PANZER</a> ARM32 NXP IMX6UL
+                    </li>
+                    <li>
+                        <a href="https://github.com/MayQueenTechCommunity/CUBE-RK3588">CUBE-RK3588</a> ARM64 Rockchip RK3588
+                    </li>
+                </ul>
+                       <hr style="margin-top: 10px; margin-bottom: 10px;"> </hr>
+                       Represent Products: Coming soon...
+            </div>
+        </div>
+
+        <!-- 作品集 視窗 -->
+        <div class="window" style="width: 400px">
+            <div class="title-bar">
+                <div class="title-bar-text">MQ E-Paper Modules</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <ul>
+                    <li>
+                        <a href="https://github.com/MayQueenTechCommunity/PIXPAPER-213-C">PIXPAPER-213-C</a> 4-Color
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="window" style="width: 400px">
+            <div class="title-bar">
+                <div class="title-bar-text">Events</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <ul>
+                    <li>
+                        MakerFaire Taipei 2024 (11/30-12/01) <br>
+                        Booth B22
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="window" style="width: 350px">
+            <div class="title-bar">
+                <div class="title-bar-text">Contact Us</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>Email: sales@mayqueentech.com</p>
+                <p>Address</p>
+ <ul>
+                    <li>
+                        Taiwan office: 8F., No. 110, Xianfu Rd., Taoyuan Dist., Taoyuan City, Taiwan (R.O.C.)
+                    </li>
+                    <li>
+                        U.K. office: 54 Stewart street, Nuneaton, Warwickshire, CV11 5SA, UK
+                    </li>
+                </ul>
+                <p>GitHub: <a href="https://github.com/MayQueenTechCommunity">MayQueenTech Community</a></p>
+ <p>Facebook: <a href="https://www.facebook.com/mayqueen.technologies/">Official Facebook</a></p>
+ <p>Linkedin: <a href="https://www.linkedin.com/company/mayqueen-technologies/">Official Linkedin</a></p>
+ <p>Discord: <a href="https://discord.gg/85aKUpsCYg">Forum</a></p>
+            </div>
+        </div>
+    </div>
+    
+   
+    
+</body>
+
+</html>
