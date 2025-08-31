@@ -15,6 +15,7 @@
         <img src="img/logo.png" alt="Mayqueen Technologies Logo">
         <span>Mayqueen Technologies</span>
       </div>
+      <div class="menu-toggle">☰</div>
       <nav>
         <ul>
             <li><a href="index.html">HOME</a></li>
@@ -106,5 +107,15 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector(".navbar nav");
+
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    });
+  </script>
 </body>
 </html>

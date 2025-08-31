@@ -358,14 +358,35 @@ a:hover {
     }
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
     .navbar nav {
-        display: none; /* 可以在這裡實現漢堡菜單 */
+        display: none;
     }
-    .hero-content h1 {
-        font-size: 3em;
+    .navbar nav.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        width: 200px;
+        padding: 10px;
     }
-    .hero-content p {
-        font-size: 1.2em;
+    .navbar nav ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar nav ul li {
+        margin: 10px 0;
     }
 }
