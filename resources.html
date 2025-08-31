@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resources | Mayqueen Technologies</title>
+
+  <!-- 既有樣式 -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- 只針對本頁新增的少量樣式 -->
+  <style>
+    /* 篩選區 */
+    .resource-filters {
+      background: #2c2c44;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 120px; /* 避開 fixed navbar */
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .resource-filters label {
+      font-weight: 700;
+      margin-right: 6px;
+    }
+    .resource-filters select, .resource-filters input {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      border: 1px solid #3b3b59;
+      border-radius: 6px;
+      padding: 10px 12px;
+      min-width: 180px;
+    }
+
+    /* 資源列表卡片：沿用卡片風格再微調尺寸 */
+    .resources-list {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    @media (max-width: 992px) {
+      .resources-list { grid-template-columns: repeat(2, minmax(260px, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .resources-list { grid-template-columns: 1fr; }
+    }
+
+    .res-card {
+      background: #1a1a2e;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .res-card h3 {
+      margin: 0 0 4px 0;
+      font-size: 1.25rem;
+    }
+    .res-card p {
+      margin: 0 0 8px 0;
+      color: #bfbfd6;
+    }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+    .tag {
+      background: #2c2c44;
+      border: 1px solid #3b3b59;
+      border-radius: 100px;
+      padding: 4px 10px;
+      font-size: 12px;
+      color: #cfd3ff;
+    }
+    .res-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+    .res-btn {
+      display: inline-block;
+      background: #00bcd4;
+      color: #0d0d1a;
+      font-weight: 700;
+      border-radius: 6px;
+      padding: 8px 12px;
+      text-decoration: none;
+    }
+    .res-btn:hover { text-decoration: none; filter: brightness(0.95); }
+
+    /* 小型頁首（可當作子頁 banner） */
+    .sub-hero {
+      padding: 40px 0 10px 0;
+      text-align: left;
+    }
+    .sub-hero h1 { margin: 0; }
+    .sub-hero p  { color: #cccccc; margin-top: 8px; }
+    /* 手機選單按鈕 */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      .navbar nav { display: none; }
+      .navbar nav.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        width: 220px;
+        padding: 10px;
+      }
+      .navbar nav ul { flex-direction: column; margin: 0; padding: 0; }
+      .navbar nav ul li { margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航列 -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" alt="Mayqueen Technologies Logo">
+        <span>Mayqueen Technologies</span>
+      </div>
+
+      <!-- 手機版切換按鈕 -->
+      <div class="menu-toggle">☰</div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html#home">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="index.html#services">SERVICES</a></li>
+          <li><a href="resources.html">RESOURCES</a></li>
+          <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+          <li><a href="index.html#blog">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 子頁抬頭 -->
+
+
+  <!-- 篩選區 -->
+  <section class="container">
+    <div class="resource-filters">
+      <div>
+        <label for="lineSelect">Product Line</label>
+        <select id="lineSelect">
+          <option value="all">All</option>
+          <option value="arm64">ARM64 Box</option>
+          <option value="epaper">Tiny E-Paper</option>
+        </select>
+      </div>
+      <div>
+        <label for="productSelect">Model Name</label>
+        <select id="productSelect" disabled>
+          <option value="all">All</option>
+        </select>
+      </div>
+      <div style="flex:1; min-width:200px;">
+        <label for="keyword">Keyword</label>
+        <input id="keyword" type="text" placeholder="Ex: spec, yocto, android"/>
+      </div>
+    </div>
+
+    <!-- 列表 -->
+    <div id="resources" class="resources-list"></div>
+  </section>
+
+  <!-- 頁腳 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-left">
+        <div class="logo">
+          <img src="img/logo.png" alt="Mayqueen Technologies Logo">
+          <span>Mayqueen Technologies</span>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="https://github.com/MayQueenTechCommunity"><img src="img/github.png" alt="Github"></a>
+          <a href="https://www.linkedin.com/company/mayqueen-technologies/"><img src="img/LinkedIn_icon.svg.png" alt="LinkedIn"></a>
+          <a href="https://www.youtube.com/@mayqueentech/videos"><img src="img/youtube.png" alt="Youtube"></a>
+          <a href="https://www.facebook.com/mayqueen.technologies/"><img src="img/facebook.png" alt="Facebook"></a>
+        </div>
+        <p>© 2025 All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 功能腳本：手機選單 + 資源篩選 -->
+  <script>
+    // 手機漢堡選單切換
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".navbar nav");
+      menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
+    });
+
+    // ====== 資源資料定義（可依需求擴充）======
+    const DATA = {
+      arm64: {
+        label: "ARM64 Box",
+        products: {
+          "PANZER-LITE93": {
+            label: "PANZER-LITE93 (NXP i.MX93)",
+            items: [
+              {
+                title: "Specification",
+                desc: "Hardware description and I/O instruction",
+                tags: ["spec", "datasheet"],
+                links: [{label:"View Spec", href:"https://github.com/MayQueenTechCommunity/PANZER-LITE93"}]
+              },
+              {
+                title: "Software Image: Ubuntu",
+                desc: "Noble 24.04 (Kernel 6.12)",
+                tags: ["image","ubuntu"],
+                links: [{label:"Download Image", href:"https://github.com/MayQueenTechCommunity/PANZER-LITE93/wiki/Ubuntu-Zone"}]
+              },
+            ]
+          },
+          "PANZER-PLUS": {
+            label: "PANZER-PLUS (NXP i.MX8MP)",
+            items: [
+              {
+                title: "Specification",
+                desc: "Hardware description and I/O instruction",
+                tags: ["spec"],
+                links: [{label:"View Spec", href:"https://github.com/MayQueenTechCommunity/PANZER-PLUS"}]
+              },
+              {
+                title: "Software Image: Android",
+                desc: "Android 12 (Kernel 5.10)<br>Android 13 (Kernel 5.15)<br>Android 14 (Kernel 6.1)<br>Android 15 (Kernel 6.6)",
+                tags: ["image","android"],
+                links: [{label:"Download Images", href:"https://github.com/MayQueenTechCommunity/PANZER-PLUS/wiki/Android-Zone"}]
+              },
+              {
+                title: "Software Image: Yocto",
+                desc: "Kirkstone 4.0 (Kernel 5.15)<br>Scarthgap 5.0 (Kernel 6.6)",
+                tags: ["image","yocto"],
+                links: [{label:"Download Images", href:"https://github.com/MayQueenTechCommunity/PANZER-PLUS/wiki/Yocto-Zone"}]
+              },
+              {
+                title: "Software Image: Ubuntu",
+                desc: "Jammy 22.04 (Kernel 5.15)<br>Noble 24.04 (Kernel 6.6)",
+                tags: ["image","ubuntu"],
+                links: [{label:"Download Images", href:"https://github.com/MayQueenTechCommunity/PANZER-PLUS/wiki/Ubuntu-Zone"}]
+              },
+              {
+                title: "Software Image: Debian",
+                desc: "Bookworm 12.0 (Kernel 6.6)",
+                tags: ["image","debian"],
+                links: [{label:"Download Images", href:"https://github.com/MayQueenTechCommunity/PANZER-PLUS/wiki/Debian-Zone"}]
+              },
+            ]
+          },
+          "PANZER": {
+            label: "PANZER (NXP i.MX6UL)",
+            items: [
+              {
+                title: "Specification",
+                desc: "Hardware description and I/O instruction",
+                tags: ["spec", "datasheet"],
+                links: [{label:"View Spec", href:"https://github.com/MayQueenTechCommunity/PANZER"}]
+              },
+              {
+                title: "Software Image: Buildroot",
+                desc: "2017.08 (Kernel 4.9.88)",
+                tags: ["image","buildroot"],
+                links: [{label:"Download Images", href:"https://www.dropbox.com/scl/fi/n8q1i986gplmdj23s75pj/20171220_panzer_buildroot-v201708_installer.zip?rlkey=i14b2ipnzode2ly13pfvsu48n&e=1&dl=0"}]
+              }
+            ]
+          },
+          "CUBE-RK3588": {
+            label: "CUBE-RK3588 (Rockchip RK3588)",
+            items: [
+              {
+                title: "Specification",
+                desc: "Hardware description and I/O instruction",
+                tags: ["spec", "datasheet"],
+                links: [{label:"View Spec", href:"https://github.com/MayQueenTechCommunity/CUBE-RK3588"}]
+              },
+              {
+                title: "Software Image: Android",
+                desc: "Android 13 (Kernel 5.10)<br>Android 14 (Kernel 6.1)<br>Android 15 (Kernel 6.1)",
+                tags: ["image","android"],
+                links: [{label:"Download Images", href:"https://github.com/MayQueenTechCommunity/CUBE-RK3588/wiki/Android-Zone"}]
+              },
+              {
+                title: "Software Image: Yocto",
+                desc: "Scarthgap 5.0 (Kernel 6.1)",
+                tags: ["image","yocto"],
+                links: [{label:"Download Images", href:"https://github.com/MayQueenTechCommunity/CUBE-RK3588/wiki/Yocto-Zone"}]
+              },
+              {
+                title: "Software Image: Ubuntu",
+                desc: "Jammy 22.04 (Kernel 5.10)<br>Noble 24.04 (Kernel 6.1)",
+                tags: ["image","ubuntu"],
+                links: [{label:"Download Images", href:"https://github.com/MayQueenTechCommunity/CUBE-RK3588/wiki/Ubuntu-Zone"}]
+              }
+            ]
+          }
+        }
+      },
+
+      epaper: {
+        label: "Tiny E-Paper",
+        products: {
+          "PIXPAPER-213-C": {
+            label: "PIXPAPER-213-C (4 Color)",
+            items: [
+              {
+                title: "Specification",
+                desc: "2.13 inch 4 color e-paper hardware description",
+                tags: ["spec", "datasheet"],
+                links: [{label:"View Spec", href:"https://github.com/MayQueenTechCommunity/PIXPAPER-213-C"}]
+              },
+              {
+                title: "User-Space: FRDM-IMX93 Linux",
+                desc: "Source code (GitHub)",
+                tags: ["source","source"],
+                links: [{label:"Open Repo", href:"https://github.com/MayQueenTechCommunity/PIXPAPER-213-C/blob/main/FRDM-IMX93_PIXPAPAER-213-C.md"}]
+              },
+              {
+                title: "User-Space: FRDM-IMX93 FreeRTOS",
+                desc: "Source code (GitHub)",
+                tags: ["source","source"],
+                links: [{label:"Open Repo", href:"https://github.com/MayQueenTechCommunity/PIXPAPER-213-C/blob/main/FRDM-IMX93-M33_PIXPAPAER-213-C.md"}]
+              },
+              {
+                title: "User-Space: PANZER-PLUS",
+                desc: "Source code (GitHub)",
+                tags: ["source","source"],
+                links: [{label:"Open Repo", href:"https://github.com/MayQueenTechCommunity/PIXPAPER-213-C/blob/main/PANZER-PLUS_PIXPAPAER-213-C.md"}]
+              },
+              {
+                title: "User-Space: Kakip",
+                desc: "Source code (GitHub)",
+                tags: ["source","source"],
+                links: [{label:"Open Repo", href:"https://github.com/MayQueenTechCommunity/PIXPAPER-213-C/blob/main/KAKIP_PIXPAPAER-213-C.md"}]
+              },
+              {
+                title: "User-Space: Raspberry PI 2",
+                desc: "Source code (GitHub)",
+                tags: ["source","source"],
+                links: [{label:"Open Repo", href:"https://github.com/MayQueenTechCommunity/PIXPAPER-213-C/blob/main/RPI2_PIXPAPAER-213-C.md"}]
+              },
+              {
+                title: "DRM driver: Raspberry PI 2",
+                desc: "Comming soon",
+                tags: ["source","drm"],
+                links: [{label:"Open Repo", href:"#"}]
+              },
+              {
+                title: "User-Space: Raspberry PI Pico",
+                desc: "Source code (GitHub)",
+                tags: ["source","source"],
+                links: [{label:"Open Repo", href:"https://github.com/MayQueenTechCommunity/PIXPAPER-213-C/blob/main/RPI-PICO_PIXPAPAER-213-C.md"}]
+              },
+            ]
+          },
+          "PIXPAPER-213-M": {
+            label: "PIXPAPER-213-M (Mono, Coming soon)",
+            items: [
+              {
+                title: "Specification",
+                desc: "2.13 inch mono color e-paper hardware description",
+                tags: ["spec", "datasheet"],
+                links: [{label:"View Spec", href:"https://github.com/MayQueenTechCommunity/PIXPAPER-213-M"}]
+              },
+            ]
+          },
+          "PIXPAPER-426-M": {
+            label: "PIXPAPER-426-M (Mono, Coming soon)",
+            items: [
+
+            ]
+          }
+        }
+      }
+    };
+
+    // ====== DOM 綁定與渲染 ======
+    const lineSelect = document.getElementById("lineSelect");
+    const productSelect = document.getElementById("productSelect");
+    const keywordInput = document.getElementById("keyword");
+    const listEl = document.getElementById("resources");
+
+    function populateProducts() {
+      const line = lineSelect.value;
+      productSelect.innerHTML = "";
+      const optAll = new Option("All", "all");
+      productSelect.add(optAll);
+
+      if (line === "all") {
+        productSelect.disabled = true;
+      } else {
+        const products = DATA[line].products;
+        Object.keys(products).forEach(key => {
+          productSelect.add(new Option(products[key].label, key));
+        });
+        productSelect.disabled = false;
+      }
+    }
+
+    function renderList() {
+      const line = lineSelect.value;
+      const product = productSelect.value;
+      const kw = keywordInput.value.trim().toLowerCase();
+
+      let items = [];
+
+      if (line === "all") {
+        // 所有產品線的所有項目
+        Object.values(DATA).forEach(group => {
+          Object.values(group.products).forEach(p => items.push(...p.items.map(i => ({...i, product:p.label, line:group.label}))));
+        });
+      } else {
+        const group = DATA[line];
+        const pool = (product === "all")
+          ? Object.values(group.products)
+          : [group.products[product]];
+        pool.forEach(p => items.push(...p.items.map(i => ({...i, product:p.label, line:group.label}))));
+      }
+
+      if (kw) {
+        items = items.filter(i =>
+          (i.title + " " + i.desc + " " + (i.tags||[]).join(" ")).toLowerCase().includes(kw)
+        );
+      }
+
+      listEl.innerHTML = items.map(i => `
+        <div class="res-card">
+          <div class="tags">
+            <span class="tag">${i.line}</span>
+            <span class="tag">${i.product}</span>
+            ${(i.tags||[]).map(t=>`<span class="tag">${t}</span>`).join("")}
+          </div>
+          <h3>${i.title}</h3>
+          <p>${i.desc}</p>
+          <div class="res-links">
+            ${i.links.map(l => `<a class="res-btn" href="${l.href}" target="_blank" rel="noopener">${l.label}</a>`).join("")}
+          </div>
+        </div>
+      `).join("");
+
+      if (items.length === 0) {
+        listEl.innerHTML = `<div class="res-card"><p>找不到符合條件的資源。</p></div>`;
+      }
+    }
+
+    // 事件綁定
+    lineSelect.addEventListener("change", () => { populateProducts(); renderList(); });
+    productSelect.addEventListener("change", renderList);
+    keywordInput.addEventListener("input", renderList);
+
+    // 初始
+    populateProducts();
+    renderList();
+  </script>
+</body>
+</html>
