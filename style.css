@@ -1,0 +1,371 @@
+/* 通用樣式 */
+body {
+    font-family: 'Open Sans', sans-serif; /* 使用您選擇的字體 */
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; /* 整體深色背景 */
+    color: #e0e0e0; /* 淺色文字 */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* 標題字體 */
+    color: #ffffff;
+}
+
+a {
+    color: #00bcd4; /* 連結顏色 */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 導航列 */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.4); /* 半透明背景 */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 30px;
+}
+
+.navbar nav ul li a {
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #00bcd4; /* 亮藍色懸停效果 */
+    text-decoration: none;
+}
+
+/* 主視覺區塊 */
+.hero-section {
+    background-image: url('img/background.png'); /* 替換為您的背景圖片 */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 150px 0 80px 0; /* 調整內邊距 */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    min-height: 70vh; /* 確保足夠的高度 */
+    position: relative;
+    overflow: hidden; /* 防止圖片溢出 */
+}
+
+.hero-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left; /* 文字靠左對齊 */
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 60%; /* 調整文字區塊寬度 */
+    padding-right: 40px;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: #cccccc;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%; /* 確保圖片響應式 */
+    height: auto;
+    display: block;
+}
+
+.btn-discover {
+    display: inline-block;
+    background-color: #ff9800; /* 橙色按鈕 */
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn-discover:hover {
+    background-color: #e68900;
+    text-decoration: none;
+}
+
+/* 服務區塊 */
+.services-section {
+    background-color: #2c2c44; /* 區塊背景色 */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 3em;
+    margin-bottom: 60px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px; /* 卡片間距 */
+    flex-wrap: wrap; /* 響應式換行 */
+}
+
+.service-cards .card {
+    background-color: #1a1a2e; /* 卡片背景色 */
+    padding: 40px 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 280px; /* 最小寬度 */
+    max-width: 350px; /* 最大寬度 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.service-cards .card:hover {
+    transform: translateY(-10px);
+}
+
+.service-cards .card img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.service-cards .card h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.service-cards .card p {
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.learn-more {
+    color: #00bcd4;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* 客戶評價區塊 */
+.testimonials-section {
+    background-color: #1a1a2e; /* 區塊背景色 */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 3em;
+    margin-bottom: 60px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #2c2c44;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 450px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00bcd4; /* 頭像邊框 */
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+
+/* 頁腳 */
+.footer {
+    background-color: #11111f; /* 頁腳背景色 */
+    padding: 40px 0;
+    color: #cccccc;
+    font-size: 0.9em;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* 響應式換行 */
+    gap: 20px;
+}
+
+.footer-left .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer-left .logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li a {
+    color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #00bcd4;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end; /* 圖標靠右 */
+    gap: 15px;
+}
+
+.social-icons img {
+    height: 24px;
+    width: 24px;
+    filter: brightness(0) invert(1); /* 將深色圖標變為淺色 */
+}
+
+/* 響應式設計 */
+@media (max-width: 992px) {
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .hero-image {
+        margin-top: 40px;
+    }
+    .service-cards, .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-cards .card, .testimonial-card {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-left, .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-links {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar nav {
+        display: none; /* 可以在這裡實現漢堡菜單 */
+    }
+    .hero-content h1 {
+        font-size: 3em;
+    }
+    .hero-content p {
+        font-size: 1.2em;
+    }
+}
