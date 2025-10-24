@@ -82,7 +82,7 @@ a:hover {
 
 /* 主視覺區塊 */
 .hero-section {
-    background-image: url('img/background.png'); /* 替換為您的背景圖片 */
+    background: linear-gradient(135deg, #1a1a2e 0%, #2c2c44 50%, #1a1a2e 100%);
     background-size: cover;
     background-position: center;
     color: #ffffff;
@@ -93,6 +93,20 @@ a:hover {
     min-height: 70vh; /* 確保足夠的高度 */
     position: relative;
     overflow: hidden; /* 防止圖片溢出 */
+}
+
+@media (min-width: 1025px) {
+    .hero-section {
+        background-image: url('img/background.png'); /* 只在電腦版顯示背景圖片 */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+ 
+    .hero-section .container {
+        position: relative;
+        z-index: 2; /* 確保內容在覆蓋層之上 */
+    }
 }
 
 .hero-section .container {
@@ -389,4 +403,5 @@ a:hover {
     .navbar nav ul li {
         margin: 10px 0;
     }
+
 }
